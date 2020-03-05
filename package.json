@@ -1,0 +1,23 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "description": "bundling and pushing to netlify",
+  "main": "currencyConverter.js",
+  "scripts": {
+    "dev": "parcel watch currencyConverter.html",
+    "build": "parcel build currencyConverter.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harish-ponna-au6/netlify-currency-converter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harish-ponna-au6/netlify-currency-converter/issues"
+  },
+  "homepage": "https://github.com/harish-ponna-au6/netlify-currency-converter#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
