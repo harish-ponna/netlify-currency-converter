@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>currencyConverter</title>
+    <link rel="stylesheet" href="currencyConverter.css">
+</head>
+
+<body>
+
+    <div class="maincontainer">
+        <h5>extra</h5>
+        <h2>Convert Your Currency Here!</h2>
+
+
+        <div class="subcontainer">
+            <form action="">
+            <div class="col1">
+                <label for="">Amount</label><br>
+                <input type="text" name="amount" class="amount" required placeholder="Enter Amount">
+            </div>
+
+
+            <div class="col2">
+                <label for="sourcecurrency">From</label><br>
+                <select name="sourcecurrency" id="sourcecurrency" class="sourcecurrency" required>
+                    <option  value="" selected disabled>Please select the source currency</option>
+                </select>
+            </div>
+
+            <div class="icon1"><img src="transfer.svg" alt="" height="50px" width="50px" class="image1"></div>
+            <div class="col3">
+                <label for="targetcurrency">To</label><br>
+                <select name="targetcurrency" id="targetcurrency" class="targetcurrency" required>
+                    <option  value="" selected disabled>Please select the target currency</option>
+                </select>
+            </div>
+            <div class="icon2"><button class="button"><img src="next.svg" alt="" height="25px" width="25px"class="image1"></button></input></div>
+        </form>
+        </div>
+        <div class="results"><div class="source"></div> <div class="target"></div> <div class="rates"></div></div>
+
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="currencyConverter.js"></script>
+</body>
+
+</html>
