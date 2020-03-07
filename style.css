@@ -35,18 +35,18 @@ h2{
     display: inline-block;
     width: 23%;
     position: relative;
-    top:3px
+    top:0px,
 }
 .col2{
     display: inline-block;
-    width: 23%;
-    margin-left: 10%;
+    width: 30%;
+    margin-left: 1%;
 
 }
 .col3{
     display: inline-block;
-    width: 23%;
-    margin-left:30px ;
+    width: 30%;
+    margin-left:10px ;
 }
 label{
     color: white;
@@ -56,7 +56,7 @@ label{
     display: inline-block;
     position: relative;
     top: 22px;
-    left: 15px;
+    left: 5px;
 }
 .icon2{
     display: inline-block;
@@ -72,6 +72,12 @@ input{
     color: #39358e;
     font-weight: 700;
     letter-spacing: 0.5px;
+    text-align: center;
+    /* border:solid rgba(12, 96, 206, 0.9) ; */
+}
+::placeholder{
+    font-size: 15px;
+    color: #39358e;
 }
 input:focus{
     outline-style: none;
@@ -85,12 +91,14 @@ select{
     width: 100%;
     height: 57px;
     border-radius: 10px;
-    font-size: 17px;
+    font-size: 15px;
     color: #39358e;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
+    text-align: center;
     font-weight: 700;
-
+    padding-left: 11%;
 }
+
 .button{
     background-color: #fcb813;
     height: 53px;
@@ -123,3 +131,34 @@ select{
     color: white;
     color: #e04646;
 }
+
+@media only screen and (max-width: 500px) {
+    .col1, .col2, .col3{
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .icon1 img{
+        transform: rotate(90deg);
+        position: relative;
+        left:110px;
+    }
+
+    .icon2 {
+        position: relative;
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 15px;
+    }
+    
+    .icon2 .button {
+        width: 100%;
+    }
+    .maincontainer{
+        border-radius: 10px;
+        position: relative;
+        top:20px
+    }
+
+  }
