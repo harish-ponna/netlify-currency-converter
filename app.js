@@ -666,7 +666,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault()
     var amount = $(".amount").val();
     if (isNaN(amount)) {
-        alert("Please enter valid input")
+        alert("Please Enter Valid Amount")
     }
     else {
         var sourceCurrency = document.querySelector(".sourcecurrency").value;
