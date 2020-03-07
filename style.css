@@ -11,6 +11,7 @@ body{
     background-color: #1d2a83;
     position: relative;
     left: 15%;
+    right: 15%;
     top:100px;
     width: 70%;
     border-radius: 35px;
@@ -93,7 +94,6 @@ select{
     border-radius: 10px;
     font-size: 15px;
     color: #39358e;
-    /* letter-spacing: 1px; */
     text-align: center;
     font-weight: 700;
     text-align-last:center
@@ -132,17 +132,20 @@ select{
     color: #e04646;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1200px) {
     .col1, .col2, .col3{
         width: 100%;
-        margin-top: 10px;
+        margin-top: 25px;
         margin-left: 0;
     }
 
     .icon1 {
-        position: relative;
-        left: 0%;
-        left: 40%;
+        /* margin:0 50% 0 40%; */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+
     }
 
     .icon1 img{
