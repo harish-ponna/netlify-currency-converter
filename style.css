@@ -96,7 +96,7 @@ select{
     /* letter-spacing: 1px; */
     text-align: center;
     font-weight: 700;
-    padding-left: 11%;
+    text-align-last:center
 }
 
 .button{
@@ -138,10 +138,16 @@ select{
         margin-top: 10px;
         margin-left: 0;
     }
+
+    .icon1 {
+        position: relative;
+        left: 0%;
+        left: 40%;
+    }
+
     .icon1 img{
         transform: rotate(90deg);
         position: relative;
-        left:110px;
     }
 
     .icon2 {
