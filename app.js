@@ -659,36 +659,41 @@ function loadCurrencyNames(parameter) {
     }
 }
 
-loadCurrencyNames (document.querySelector(".sourcecurrency"))
-loadCurrencyNames (document.querySelector(".targetcurrency"))
+loadCurrencyNames(document.querySelector(".sourcecurrency"))
+loadCurrencyNames(document.querySelector(".targetcurrency"))
 
-document.querySelector("form").addEventListener("submit", function(event){
+document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault()
     var amount = $(".amount").val();
-    var sourceCurrency=document.querySelector(".sourcecurrency").value;
-    var targetCurrency=document.querySelector(".targetcurrency").value;
-    fetch(`https://free.currconv.com/api/v7/convert?q=${sourceCurrency}_${targetCurrency}&compact=ultra&apiKey=1c1db4443e8a97f83ceb`)
-    .then(function(response){
-        return response.json();
-    }).then(function(responseJson){
-        return responseJson[`${sourceCurrency}_${targetCurrency}`];
-    }).then(function(total){
-        console.log(total);
-        var totalAmount = Math.round(amount * total)
-        var source=document.querySelector(".source")
-        var target=document.querySelector(".target")
-        var rates = document.querySelector(".rates")
-        var pTag1=document.createElement("p");
-        pTag1.textContent=amount+" "+sourceCurrency+" = ";
-        var pTag2=document.createElement("h5");
-        pTag2.textContent=" "+totalAmount+" "+targetCurrency;
-        var pTag3=document.createElement("p");
-        pTag3.textContent="1 "+sourceCurrency+" = "+total+" "+targetCurrency;
-        source.innerHTML=pTag1.textContent;
-        target.innerHTML=pTag2.textContent;
-        rates.innerHTML=pTag3.textContent;
-        document.querySelector(".results").style.display='block';
+    if (isNaN(amount)) {
+        alert("Please enter valid input")
+    }
+    else {
+        var sourceCurrency = document.querySelector(".sourcecurrency").value;
+        var targetCurrency = document.querySelector(".targetcurrency").value;
+        fetch(`https://free.currconv.com/api/v7/convert?q=${sourceCurrency}_${targetCurrency}&compact=ultra&apiKey=1c1db4443e8a97f83ceb`)
+            .then(function (response) {
+                return response.json();
+            }).then(function (responseJson) {
+                return responseJson[`${sourceCurrency}_${targetCurrency}`];
+            }).then(function (total) {
+                console.log(total);
+                var totalAmount = Math.round(amount * total)
+                var source = document.querySelector(".source")
+                var target = document.querySelector(".target")
+                var rates = document.querySelector(".rates")
+                var pTag1 = document.createElement("p");
+                pTag1.textContent = amount + " " + sourceCurrency + " = ";
+                var pTag2 = document.createElement("h5");
+                pTag2.textContent = " " + totalAmount + " " + targetCurrency;
+                var pTag3 = document.createElement("p");
+                pTag3.textContent = "1 " + sourceCurrency + " = " + total + " " + targetCurrency;
+                source.innerHTML = pTag1.textContent;
+                target.innerHTML = pTag2.textContent;
+                rates.innerHTML = pTag3.textContent;
+                document.querySelector(".results").style.display = 'block';
 
-    })
+            })
+    }
 })
 

@@ -3,7 +3,8 @@ body{
     background-image: linear-gradient(rgba(12, 96, 206, 0.9),rgba(73, 76, 224, 0.9)), url("15065619-background-of-asian-currency.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    background-attachment: fixed;
+    min-height: 100vh;
 
 }
 
@@ -132,6 +133,16 @@ select{
     color: #e04646;
 }
 
+.copy-right{
+    position: fixed;
+    color: white;
+    letter-spacing: 1px;
+    top:90%;
+    left: 45%;
+}
+
+
+
 @media only screen and (max-width: 1200px) {
     .col1, .col2, .col3{
         width: 100%;
@@ -170,4 +181,14 @@ select{
         top:20px
     }
 
+    .copy-right{
+        position: fixed;
+        color: white;
+        letter-spacing: 1px;
+        top:0%;
+        left: 0%;
+        position: relative;
+        text-align: center;
+        margin-top: 10%;
+    }
   }
