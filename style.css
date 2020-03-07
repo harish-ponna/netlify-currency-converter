@@ -141,9 +141,34 @@ select{
     left: 45%;
 }
 
-
-
 @media only screen and (max-width: 1200px) {
+    .maincontainer{
+        background-color: #1d2a83;
+        position: relative;
+        left: 5%;
+        right: 5%;
+        top:100px;
+        width: 90%;
+        border-radius: 25px;
+        min-height: 200px;
+    }
+
+}
+@media only screen and (max-width: 1000px) {
+    .maincontainer{
+        background-color: #1d2a83;
+        position: relative;
+        left: 1%;
+        right: 1%;
+        top:100px;
+        width: 98%;
+        border-radius: 15px;
+        min-height: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
     .col1, .col2, .col3{
         width: 100%;
         margin-top: 25px;
@@ -151,7 +176,6 @@ select{
     }
 
     .icon1 {
-        /* margin:0 50% 0 40%; */
             display: block;
             margin-left: auto;
             margin-right: auto;
