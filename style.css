@@ -167,13 +167,63 @@ select{
         min-height: 200px;
     }
 
+    .col1{
+        width: 70%;
+        left: 15%;
+        position: relative;
+        top:0px,
+    }
+    .col2{
+        display: inline-block;
+        width: 40%;
+        margin-left: 5%;
+        margin-top: 2%;
+    
+    }
+    .col3{
+        display: inline-block;
+        width: 40%;
+        margin-left:10px ;
+         margin-top: 2%;
+    }
+    .icon2{
+        display: block;
+        position: static; 
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    .icon2 .button {
+        width: 50%;
+        position: relative;
+        left: 25%;
+        margin-top: 2%;
+    }
+    .copy-right{
+        position: fixed;
+        color: white;
+        letter-spacing: 1px;
+        top:0%;
+        left: 0%;
+        position: relative;
+        text-align: center;
+        margin-top: 20%;
+    }
+
+   
+    
+
+
 }
 
-@media only screen and (max-width: 900px) {
+
+@media only screen and (max-width: 600px) {
     .col1, .col2, .col3{
+        margin-left: 0;
         width: 100%;
         margin-top: 25px;
-        margin-left: 0;
+        left:0;
+        position: relative;
+        
     }
 
     .icon1 {
@@ -199,6 +249,8 @@ select{
     
     .icon2 .button {
         width: 100%;
+        left:0;
+        position: relative;
     }
     .maincontainer{
         border-radius: 10px;
